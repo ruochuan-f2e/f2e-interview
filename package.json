@@ -4,22 +4,34 @@
   "description": ">原先在[语雀中](https://www.yuque.com/ruochuan12/notice/p0)，[**语雀专栏有树形菜单，关注后也有通知，体验可能相对比较好，也相对方便查看**](https://www.yuque.com/ruochuan12/notice)，现在同步到掘金专栏[【若川视野 x 源码共读】](https://juejin.cn/column/7078688202092969991)，两边基本会保持同步。",
   "main": "index.js",
   "scripts": {
+    "commit": "git-cz",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "docs:dev": "vitepress dev .",
-    "docs:build": "vitepress build .",
-    "docs:preview": "vitepress preview ."
+    "preinstall": "npx only-allow pnpm",
+    "copy": "echo copy",
+    "copy1": "node ./scripts/copyIndex.js",
+    "dev": "pnpm run copy && rspress dev",
+    "build": "pnpm run copy && rspress build",
+    "preview": "pnpm run copy && rspress preview"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ruochuan-f2e/f2e-interview.git"
   },
-  "author": "https://github.com/lxchuan12",
-  "license": "ISC",
+  "author": "https://github.com/ruochuan12",
+  "license": "MIT",
   "bugs": {
     "url": "https://github.com/ruochuan-f2e/f2e-interview/issues"
   },
   "homepage": "https://github.com/ruochuan-f2e/f2e-interview#readme",
+  "dependencies": {
+    "rspress": "^1.42.0"
+  },
   "devDependencies": {
-    "vitepress": "^1.0.0-rc.10"
+    "git-cz": "^4.9.0",
+    "globby": "^14.1.0",
+    "release-it": "^17.11.0",
+    "rsbuild-plugin-google-analytics": "^1.0.3",
+    "rspress-plugin-font-open-sans": "^1.0.0",
+    "rspress-plugin-reading-time": "^0.3.0"
   }
 }
