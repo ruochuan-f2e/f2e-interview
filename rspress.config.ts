@@ -8,14 +8,14 @@ export default defineConfig({
   root: path.join(__dirname, 'docs'),
   //   root: 'docs',
   base: '/f2e-interview/',
-  title: '若川的博客',
+  title: '前端面试-by@若川',
   lang: 'zh',
   keywords:
-    '若川，微信搜索「若川视野」关注我，长期交流学习。写有《学习源码整体架构系列》。包含jquery源码、underscore源码、lodash源码、sentry源码、vuex源码、axios源码、koa源码、redux源码、vue-devtools源码、vuex4源码。前端路上，PPT爱好者，所知甚少，唯善学。',
+    '前端面试，前端面试题，前端面试经验，前端面试技巧，前端面试准备，前端面试指南，前端面试问题，前端面试总结，前端面试分享，前端面试资料，前端面试资源',
   description:
-    '若川，微信搜索「若川视野」关注我，长期交流学习。写有《学习源码整体架构系列》。包含jquery源码、underscore源码、lodash源码、sentry源码、vuex源码、axios源码、koa源码、redux源码。前端路上，PPT爱好者，所知甚少，唯善学。',
+    '前端面试，前端面试题，前端面试经验，前端面试技巧，前端面试准备，前端面试指南，前端面试问题，前端面试总结，前端面试分享，前端面试资料，前端面试资源',
   //   lang: 'zh',
-//   icon: '/favicon.ico',
+  //   icon: '/favicon.ico',
   // logo: {
   // 	light: "/logo-2.jpg",
   // 	dark: "/logo-2.jpg",
@@ -47,11 +47,8 @@ export default defineConfig({
   ],
   route: {
     exclude: [
-      'jquery',
-      'mini-webpack',
       '**/images/**/*',
       '**/**/README.md',
-      'debounce',
     ],
     // exclude: ['**/fragments/**'],
     // extensions: ['.jsx', '.md', '.mdx'],
@@ -77,7 +74,7 @@ export default defineConfig({
       {
         icon: 'github',
         mode: 'link',
-        content: 'https://github.com/ruochuan12',
+        content: 'https://github.com/ruochuan-f2e/f2e-interview',
       },
       //   {
       //     icon: 'discord',
@@ -123,10 +120,22 @@ export default defineConfig({
         text: '主页',
         link: '/',
       },
-    //   {
-    //     text: '关于我',
-    //     link: '/about/',
-    //   },
+      {
+        text: '加群交流',
+        link: '/services/group/index',
+      },
+      {
+        text: '公众号：若川视野',
+        link: 'https://image-static.segmentfault.com/355/182/3551821948-5df888aa1dc88_articlex',
+      },
+      {
+        text: '掘金',
+        link: 'https://juejin.cn/column/6960551178908205093',
+      },
+      {
+        text: 'Github',
+        link: 'https://github.com/ruochuan12/blog',
+      },
       {
         text: '源码共读',
         link: 'https://www.yuque.com/ruochuan12/notice/p0',
@@ -149,37 +158,20 @@ export default defineConfig({
           },
         ],
       },
-    //   {
-    //     text: '曾经写的"诗词"',
-    //     link: '/poetry/2012-2016/',
-    //   },
-      {
-        text: '掘金',
-        link: 'https://juejin.cn/column/6960551178908205093',
-      },
-      {
-        text: 'Github',
-        link: 'https://github.com/ruochuan12/blog',
-      },
-      {
-        text: '公众号：若川视野',
-        link: 'https://image-static.segmentfault.com/355/182/3551821948-5df888aa1dc88_articlex',
-      },
-
-      {
-        text: '知乎',
-        link: 'https://www.zhihu.com/people/lxchuan12/activities',
-      },
-      {
-        text: '语雀',
-        link: 'https://www.yuque.com/lxchuan12/blog',
-      },
       {
         text: '其他',
         items: [
           {
+            text: '知乎',
+            link: 'https://www.zhihu.com/people/lxchuan12/activities',
+          },
+          {
+            text: '语雀',
+            link: 'https://www.yuque.com/lxchuan12/blog',
+          },
+          {
             text: 'segmentFault',
-            link: 'https://segmentfault.com/u/lxchuan12/articles',
+            link: 'https://segmentfault.com/u/ruochuan12/articles',
           },
           {
             text: '微博',
@@ -196,9 +188,57 @@ export default defineConfig({
     sidebar: {
       '/': [
         {
-          text: '面试',
-          items: [{ text: '面试', link: '/index' }],
-        }
+          text: '目录',
+          prefix: '/',
+        },
+        {
+          text: 'JavaScript',
+          items: [{ text: '基础', link: '/js/index' }],
+        },
+        {
+          text: '前端框架',
+          items: [
+            { text: 'vue', link: '/framework/vue/index' },
+            { text: 'react', link: '/framework/react/index' },
+          ],
+        },
+        {
+          text: '前端工程化',
+          items: [
+            { text: 'webpack', link: '/engineering/webpack/index' },
+            { text: 'vite', link: '/engineering/vite/index' },
+          ],
+        },
+        {
+          text: 'nodejs',
+          items: [{ text: '基础', link: '/nodejs/index' }],
+        },
+        {
+          text: '小程序',
+          items: [{ text: '微信小程序', link: '/miniprogram/index' }],
+        },
+        {
+          text: '跨端',
+          items: [
+            {
+              text: 'React Native',
+              link: '/cross-platform/react-native/index',
+            },
+          ],
+        },
+        {
+          text: '参与贡献和加群交流',
+          items: [
+            {
+              text: '参与贡献',
+              link: '/services/contributing/index',
+            },
+            {
+              text: '加群交流',
+              link: '/services/group/index',
+            },
+          ],
+        },
       ],
     },
   },
