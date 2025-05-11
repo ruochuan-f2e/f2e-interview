@@ -46,10 +46,7 @@ export default defineConfig({
     // ],
   ],
   route: {
-    exclude: [
-      '**/images/**/*',
-      '**/**/README.md',
-    ],
+    exclude: ['**/images/**/*', '**/**/README.md'],
     // exclude: ['**/fragments/**'],
     // extensions: ['.jsx', '.md', '.mdx'],
     cleanUrls: true,
@@ -192,6 +189,12 @@ export default defineConfig({
           prefix: '/',
         },
         {
+          text: '面试须知',
+          items: [
+            { text: '须知', link: '/interview/index' },
+          ],
+        },
+        {
           text: 'JavaScript',
           items: [{ text: '基础', link: '/js/index' }],
         },
@@ -200,6 +203,7 @@ export default defineConfig({
           items: [
             { text: 'vue', link: '/framework/vue/index' },
             { text: 'react', link: '/framework/react/index' },
+            { text: 'umi', link: '/framework/umi/index' },
           ],
         },
         {
@@ -225,6 +229,32 @@ export default defineConfig({
               link: '/cross-platform/react-native/index',
             },
           ],
+        },
+        // {
+        //   text: '计算机基础',
+        //   items: [
+        //     { text: 'webpack', link: '/engineering/webpack/index' },
+        //   ],
+        // },
+        // {
+        //   text: '浏览器原理',
+        //   items: [
+        //     { text: 'webpack', link: '/engineering/webpack/index' },
+        //   ],
+        // },
+        // {
+        //   text: '算法和数据结构',
+        //   items: [
+        //     { text: 'webpack', link: '/engineering/webpack/index' },
+        //   ],
+        // },
+        // {
+        //   text: '项目和场景题',
+        //   items: [{ text: 'webpack', link: '/engineering/webpack/index' }],
+        // },
+        {
+          text: '其他',
+          items: [{ text: '面试合集', link: '/other/index' }],
         },
         {
           text: '参与贡献和加群交流',
