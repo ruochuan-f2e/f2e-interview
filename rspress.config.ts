@@ -228,6 +228,14 @@ export default defineConfig({
               text: 'React Native',
               link: '/cross-platform/react-native/index',
             },
+            {
+              text: 'Flutter',
+              link: '/cross-platform/flutter/index',
+            },
+            {
+              text: 'Electron',
+              link: '/cross-platform/electron/index',
+            },
           ],
         },
         // {
