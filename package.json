@@ -1,7 +1,7 @@
 {
   "name": "f2e-interview",
   "version": "1.0.0",
-	"type": "module",
+  "type": "module",
   "description": ">原先在[语雀中](https://www.yuque.com/ruochuan12/notice/p0)，[**语雀专栏有树形菜单，关注后也有通知，体验可能相对比较好，也相对方便查看**](https://www.yuque.com/ruochuan12/notice)，现在同步到掘金专栏[【若川视野 x 源码共读】](https://juejin.cn/column/7078688202092969991)，两边基本会保持同步。",
   "main": "index.js",
   "scripts": {
@@ -9,10 +9,10 @@
     "test": "echo \"Error: no test specified\" && exit 1",
     "preinstall": "npx only-allow pnpm",
     "copy:dev": "node ./scripts/copyIndex.js --watch",
-		"copy:build": "node ./scripts/copyIndex.js",
-		"dev": "rspress dev & pnpm run copy:dev",
-		"build": "pnpm run copy:build && rspress build",
-		"preview": "pnpm run copy:build && rspress preview"
+    "copy:build": "node ./scripts/copyIndex.js",
+    "dev": "rspress dev & pnpm run copy:dev",
+    "build": "pnpm run copy:build && rspress build",
+    "preview": "pnpm run copy:build && rspress preview"
   },
   "repository": {
     "type": "git",
@@ -25,13 +25,13 @@
   },
   "homepage": "https://github.com/ruochuan-f2e/f2e-interview#readme",
   "dependencies": {
-    "rspress": "^1.43.13"
+    "rspress": "^1.44.0"
   },
   "devDependencies": {
+    "chokidar": "^4.0.3",
     "git-cz": "^4.9.0",
     "globby": "^14.1.0",
     "release-it": "^17.11.0",
-    "chokidar": "^4.0.3",
     "rsbuild-plugin-google-analytics": "^1.0.3",
     "rspress-plugin-font-open-sans": "^1.0.0",
     "rspress-plugin-reading-time": "^0.3.0"
